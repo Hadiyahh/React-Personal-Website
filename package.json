@@ -15,8 +15,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "jest --no-cache",
+    "eject": "react-scripts eject",
+    "clean": "rm -rf build node_modules",
+    "fix": "prettier --write \"src/**/*.{ts,tsx,json}\" && eslint --fix \"src/**/*.{ts,tsx,json}\"",
+    "lint": "eslint \"src/**/*.{ts,tsx,json}",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
