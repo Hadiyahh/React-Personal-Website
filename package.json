@@ -1,7 +1,7 @@
 {
   "name": "hadiyah-arif-react-portfolio",
-  "homepage": "https://hadiyaharif.tech",
-  "version": "0.2.0",
+  "homepage": "http://hadiyaharif.tech",
+  "version": "1.0",
   "dependencies": {
       "@deadcoder0904/react-typical": "^0.1.2",
       "@fortawesome/fontawesome-svg-core": "^6.1.2",
