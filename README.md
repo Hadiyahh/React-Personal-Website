@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm run deploy`
+
+Make sure to install all libraries and dependecies such as gh-pages to deploy. All will be automatically installed when you run `npm i` or `npm install`
+ in the terminal.
 ### `npm start`
 
 Runs the app in the development mode.\
