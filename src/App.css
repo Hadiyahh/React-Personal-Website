@@ -1,0 +1,131 @@
+/* Styling for the App component */
+.App {
+  text-align: center;
+}
+
+/* Styling for the App header */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* Styling for the logo with a spinning animation */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+
+/* Styling for the links container */
+.App-links {
+  display: flex;
+  gap: 10px; /* Add space between the links */
+  justify-content: center; /* Center the links horizontally */
+}
+
+/* Styling for the individual links */
+.App-link {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+/* Styling for the links on hover */
+.App-link:hover {
+  text-decoration: underline;
+}
+
+/* Styling for the main content */
+.App-main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+}
+
+/* Styling for sections */
+.App-main section {
+  width: 100%;
+  padding: 20px 0;
+  margin: 0;
+  text-align: center; /* Center the text within each section */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Styling for section headings */
+.App-main h2 {
+  color: #282c34;
+}
+
+/* Styling for section paragraphs */
+.App-main p {
+  color: #333;
+}
+
+/* Styling for the skills list */
+.App-main ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+.App-main li {
+  display: flex;
+  align-items: center;
+  background: #61dafb;
+  color: white;
+  margin: 5px auto; /* Center the list items */
+  padding: 5px 10px; /* Adjust padding for smaller size */
+  border-radius: 5px;
+  width: 200px; /* Set a fixed width for the list items */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Styling for the skill logos */
+.skill-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+
+}
+
+img {
+  background-color: transparent;
+  border: none;
+}
+
+/* Styling for the gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery-image {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-me {
+  background-color: #f5f3ef; /* Cream / soft beige */
+}
+
+.skills {
+  background-color: #b89b94; /* Taupe/sweater color */
+}
+
+.projects {
+  background-color: #7a3f48; /* Deep maroon scarf */
+}
+
+.hackathons-conferences {
+  background-color: #d6cfc9; /* Soft greyish beige to balance */
+}
