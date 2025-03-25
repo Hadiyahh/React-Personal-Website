@@ -1,6 +1,6 @@
 {
   "name": "hadiyah",
-  "homepage": "https://hadiyahh.github.io/React-Personal-Website/",
+  "homepage": "http://hadiyaharif.tech/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,12 +23,6 @@
     "lint": "eslint \"src/**/*.{ts,tsx,json}",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
