@@ -1,8 +1,8 @@
-import React from 'react'; // Import React library
-import logo from './image.webp'; // Import the logo image
-import './App.css'; // Import the CSS file for styling
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import logo from './image.webp';
 
-// Import the language logos
+// Logos
 import ccLogo from './logos/cc-logo.png';
 import reactLogo from './logos/react-logo.png';
 import nodeLogo from './logos/node.png';
@@ -10,109 +10,148 @@ import htmlCssjsLogo from './logos/html-js-css.png';
 import javaLogo from './logos/java.png';
 import bashLogo from './logos/bash.png';
 
-// Import hackathon and conference images
-//import hackathon1 from '../images/hackathon1.png';
-//import hackathon2 from '../assets/images/hackathon2.png';
+// Images
 import Thumbnail from './images/coming-soon.jpg';
-
 import conference1 from './images/conference_pic.png';
-//import conference2 from '../assets/images/conference2.png';
+import volunteer1 from './images/coming-soon.jpg';
+import volunteer2 from './images/coming-soon.jpg';
+import volunteer3 from './images/coming-soon.jpg';
+import volunteer4 from './images/coming-soon.jpg';
 
 function App() {
+  // Dark Mode Toggle
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem('darkMode');
+    return savedMode ? JSON.parse(savedMode) : false;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('darkMode', JSON.stringify(darkMode));
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode(prev => !prev);
+  };
+
+  // Project Data
+  const projects = [
+    {
+      title: 'Project 1',
+      image: Thumbnail,
+      link: 'https://github.com/Hadiyahh/project1',
+    },
+    {
+      title: 'Project 2',
+      image: Thumbnail,
+      link: 'https://github.com/Hadiyahh/project2',
+    },
+  ];
+
+  // Volunteer Image Slider
+  const scrollSlider = (direction) => {
+    const slider = document.getElementById('volunteerSlider');
+    const scrollAmount = 340;
+    if (slider) {
+      slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  // Image Modal
+  const [modalImage, setModalImage] = useState(null);
+  const handleImageClick = (src) => setModalImage(src);
+  const closeModal = () => setModalImage(null);
+
   return (
-    <div className="App">
+    <div className={darkMode ? 'App dark' : 'App'}>
       <header className="App-header">
-        {/* Display the logo with a spinning animation */}
+        <button className="mode-toggle" onClick={toggleDarkMode}>
+          {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+        </button>
+
         <img src={logo} className="App-logo" alt="logo" />
-        
-        {/* Display a paragraph with the website title */}
-        <p>
-            Hadiyah's website
-        </p>
-        
-        {/* Container for the links */}
+        <p>Hadiyah's website</p>
+
         <div className="App-links">
-          {/* LinkedIn link */}
-          <a
-            className="App-link"
-            href="https://www.linkedin.com/in/hadiyaharif10"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn |
-          </a>
-          
-          {/* GitHub link */}
-          <a
-            className="App-link"
-            href="https://github.com/Hadiyahh"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
+          <a className="App-link" href="https://www.linkedin.com/in/hadiyaharif10" target="_blank" rel="noopener noreferrer">LinkedIn |</a>
+          <a className="App-link" href="https://github.com/Hadiyahh" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a className="App-link" href="./Resume.pdf" download>| Resume</a>
         </div>
       </header>
-      
-      {/* Additional content section */}
+
       <main className="App-main">
-        {/* Add a section with a heading and a paragraph */}
-        <section className="about-me">
+        {/* About Me */}
+        <section id="about" className="about-me fade-in">
           <h2>About Me</h2>
-          <p>
-            Hello! I'm Hadiyah, a software developer with a passion for creating amazing web applications.
-          </p>
+          <p>Hello! I'm Hadiyah, a software developer with a passion for creating amazing web applications.</p>
         </section>
-        
-        {/* Add another section with a list of skills */}
-        <section className="skills">
+
+        {/* Skills */}
+        <section id="skills" className="skills fade-in">
           <h2>Skills</h2>
           <ul>
-            <li>
-              <img src={ccLogo} alt="JavaScript Logo" className="skill-logo" />
-              C and C++
-            </li>
-            <li>
-              <img src={reactLogo} alt="React Logo" className="skill-logo" />
-              React
-            </li>
-            <li>
-              <img src={nodeLogo} alt="Node.js Logo" className="skill-logo" />
-              Node.js
-            </li>
-            <li>
-              <img src={htmlCssjsLogo} alt="HTML, CSS and JavaScript Logo" className="skill-logo" />
-              HTML, CSS & JavaScript
-            </li>
-            <li>
-              <img src={javaLogo} alt="Java Logo" className="skill-logo" />
-              Java
-            </li>
-            <li>
-              <img src={bashLogo} alt="Bash Logo" className="skill-logo" />
-              Bash
-            </li>
+            <li><img src={ccLogo} alt="C and C++ Logo" className="skill-logo" />C and C++</li>
+            <li><img src={reactLogo} alt="React Logo" className="skill-logo" />React</li>
+            <li><img src={nodeLogo} alt="Node.js Logo" className="skill-logo" />Node.js</li>
+            <li><img src={htmlCssjsLogo} alt="HTML, CSS, JavaScript Logo" className="skill-logo" />HTML, CSS & JavaScript</li>
+            <li><img src={javaLogo} alt="Java Logo" className="skill-logo" />Java</li>
+            <li><img src={bashLogo} alt="Bash Logo" className="skill-logo" />Bash</li>
           </ul>
         </section>
-        
-        {/* Add a section with an image */}
-        <section className="projects">
-          <img src={Thumbnail} alt="Project Thumbnail" />
-          <p>
-            Check out some of my projects on GitHub!
-          </p>
-        </section>
-         {/* Add a new section for hackathons and conferences */}
-        <section className="hackathons-conferences">
-          <h2>Hackathons and Conferences</h2>
+
+        {/* Projects */}
+        <section id="projects" className="projects fade-in">
+          <h2>My Projects</h2>
           <div className="gallery">
-            <img src={conference1} alt="Conference 1" className="gallery-image" />
+            {projects.map((proj, index) => (
+              <a href={proj.link} key={index} target="_blank" rel="noopener noreferrer">
+                <img src={proj.image} alt={proj.title} className="gallery-image" />
+              </a>
+            ))}
           </div>
         </section>
+
+        {/* Hackathons */}
+        <section id="hackathons" className="hackathons-conferences fade-in">
+          <h2>Hackathons and Conferences</h2>
+          <div className="gallery">
+            <img src={conference1} alt="Conference participation" className="gallery-image" />
+          </div>
+        </section>
+
+        {/* Volunteer Experience */}
+        <section id="volunteer" className="volunteer-experiences fade-in">
+          <h2>Volunteer Experiences</h2>
+          <div className="slider-wrapper">
+            <button className="slider-button left" onClick={() => scrollSlider(-1)}>‹</button>
+            <div className="slider-frame">
+              <div className="slider-track" id="volunteerSlider">
+                {[volunteer1, volunteer2, volunteer3, volunteer1, volunteer2, volunteer3].map((img, i) => (
+                  <img
+                    key={i}
+                    src={img}
+                    alt={`Volunteer ${i + 1}`}
+                    className="slider-image"
+                    onClick={() => handleImageClick(img)}
+                  />
+                ))}
+              </div>
+            </div>
+            <button className="slider-button right" onClick={() => scrollSlider(1)}>›</button>
+          </div>
+        </section>
+
+        {/* Modal */}
+        {modalImage && (
+          <div className="image-modal" onClick={closeModal}>
+            <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
+              <span className="image-modal-close" onClick={closeModal}>×</span>
+              <img src={modalImage} alt="Enlarged view" />
+            </div>
+          </div>
+        )}
       </main>
     </div>
   );
 }
 
-export default App; // Export the App component as the default export
-
+export default App;
