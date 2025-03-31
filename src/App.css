@@ -1,11 +1,13 @@
-/* Styling for the App component */
+/* General App Styling */
 .App {
   text-align: center;
+  font-family: 'Raleway', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Styling for the App header */
+/* Header styling */
 .App-header {
-  background-color: #282c34;
+  background-color: #f0e4c3;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,119 +15,398 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
+  transition: background-color 0.8s ease;
 }
 
-/* Styling for the logo with a spinning animation */
+.App.dark .App-header {
+  background-color: #1e1e1e;
+}
+
+/* Logo */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-  animation: App-logo-spin infinite 20s linear;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Toggle Button */
+.mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: 2px solid currentColor;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: inherit;
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
-/* Styling for the links container */
+/* Links */
 .App-links {
   display: flex;
-  gap: 10px; /* Add space between the links */
-  justify-content: center; /* Center the links horizontally */
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
 }
 
-/* Styling for the individual links */
 .App-link {
   color: #61dafb;
   text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease;
 }
 
-/* Styling for the links on hover */
 .App-link:hover {
   text-decoration: underline;
+  transform: scale(1.05);
 }
 
-/* Styling for the main content */
+/* Main content */
 .App-main {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center the content horizontally */
+  align-items: center;
 }
 
-/* Styling for sections */
 .App-main section {
   width: 100%;
-  padding: 20px 0;
-  margin: 0;
-  text-align: center; /* Center the text within each section */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 40px 20px;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-/* Styling for section headings */
 .App-main h2 {
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 10px;
   color: #282c34;
 }
 
-/* Styling for section paragraphs */
 .App-main p {
   color: #333;
 }
 
-/* Styling for the skills list */
+/* Skills */
 .App-main ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
-
 
 .App-main li {
   display: flex;
   align-items: center;
-  background: #61dafb;
-  color: white;
-  margin: 5px auto; /* Center the list items */
-  padding: 5px 10px; /* Adjust padding for smaller size */
-  border-radius: 5px;
-  width: 200px; /* Set a fixed width for the list items */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  justify-content: center;
+  background: #f8f5f4;
+  color: #1f1f1f;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 10px;
+  width: 240px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  transition: transform 0.2s ease;
 }
 
-/* Styling for the skill logos */
+.App-main li:hover {
+  transform: scale(1.02);
+  background: #eae7e5;
+}
+
 .skill-logo {
   width: 30px;
   height: 30px;
   margin-right: 10px;
-
 }
 
 img {
   background-color: transparent;
   border: none;
+  max-width: 100%;
 }
 
-/* Styling for the gallery */
+/* Gallery */
 .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .gallery-image {
   width: 200px;
   height: auto;
   border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.gallery-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Fade-In Animation */
+.fade-in {
+  animation: fade 1s ease-in;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Section Colors */
 .about-me {
-  background-color: #f5f3ef; /* Cream / soft beige */
+  background-color: #fffaf3;
 }
 
 .skills {
-  background-color: #b89b94; /* Taupe/sweater color */
+  background-color: #f4e4d3;
 }
 
 .projects {
-  background-color: #7a3f48; /* Deep maroon scarf */
+  background-color: #ecdad2;
+  color: white;
 }
 
 .hackathons-conferences {
-  background-color: #d6cfc9; /* Soft greyish beige to balance */
+  background-color: #f9f5e9;
+}
+
+
+/* Dark Mode Styles */
+.App.dark {
+  color: #f0f0f0;
+}
+
+.App.dark .App-main h2,
+.App.dark .App-main p,
+.App.dark .App-link {
+  color: #e0e0e0;
+}
+
+.App.dark .App-main li {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+.App.dark .projects {
+  background-color: #3a1c20;
+}
+
+.App.dark .about-me {
+  background-color: #2a2a2a;
+}
+
+.App.dark .skills {
+  background-color: #4f4343;
+}
+
+.App.dark .hackathons-conferences {
+  background-color: #3c3c3c;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .App-main li {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .App-logo {
+    height: 25vmin;
+  }
+
+  .App-links {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .mode-toggle {
+    top: 10px;
+    right: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Volunteer Slider */
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  gap: 10px;
+}
+
+.slider-frame {
+  overflow-x: auto;
+  width: 90%;
+  max-width: 800px;
+  scroll-behavior: smooth;
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.slider-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  flex-shrink: 0;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+/*.slider-image:hover {
+  transform: scale(1.05);
+}
+
+.slider-button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: inherit;
+  padding: 10px;
+  z-index: 1;
+  transition: transform 0.2s ease;
+}
+
+.slider-button:hover {
+  transform: scale(1.2);
+}*/
+
+
+
+/* Modal */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.image-modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.image-modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.image-modal-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 28px;
+  color: white;
+  background: #333;
+  border-radius: 50%;
+  padding: 0 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+/* Timeline Section */
+.timeline-section {
+  padding: 50px 20px;
+  background-color: #efe1bd;
+}
+
+.App.dark .timeline-section {
+  background-color: #2e2e2e;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 30px;
+  border-left: 3px solid #61dafb;
+  max-width: 600px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  background: #61dafb;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+/* Timeline Text Styling */
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.timeline-content h4 {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #3a3535;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #585656;
+  font-style: italic;
+}
+
+/* Dark Mode Overrides */
+.App.dark .timeline {
+  border-left-color: #a87373;
+}
+
+.App.dark .timeline-marker {
+  background: #9b2a2a;
+}
+
+.App.dark .timeline-content h3 {
+  color: #f0f0f0;
+}
+
+.App.dark .timeline-content h4 {
+  color: #d0d0d0;
+}
+
+.App.dark .timeline-content p {
+  color: #ccc;
+  font-style: italic;
 }
