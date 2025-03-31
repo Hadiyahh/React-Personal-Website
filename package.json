@@ -1,6 +1,6 @@
 {
   "name": "hadiyah",
-  "homepage": "http://hadiyaharif.tech/",
+  "homepage": "https://hadiyah.tech",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "clean": "rm -rf build node_modules",
     "fix": "prettier --write \"src/**/*.{ts,tsx,json}\" && eslint --fix \"src/**/*.{ts,tsx,json}\"",
-    "lint": "eslint \"src/**/*.{ts,tsx,json}",
+    "lint": "eslint \"src/**/*.{ts,tsx,json}\"",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },

@@ -11,12 +11,10 @@ import javaLogo from './logos/java.png';
 import bashLogo from './logos/bash.png';
 
 // Images
-import Thumbnail from './images/coming-soon.jpg';
+import Thumbnail1 from './images/shop.png';
+import Thumbnail2 from './images/art.png';
 import conference1 from './images/conference_pic.png';
-import volunteer1 from './images/coming-soon.jpg';
-import volunteer2 from './images/coming-soon.jpg';
-import volunteer3 from './images/coming-soon.jpg';
-import volunteer4 from './images/coming-soon.jpg';
+import hospital from './images/hospital.png';
 
 function App() {
   // Dark Mode Toggle
@@ -36,25 +34,28 @@ function App() {
   // Project Data
   const projects = [
     {
-      title: 'Project 1',
-      image: Thumbnail,
-      link: 'https://github.com/Hadiyahh/project1',
+      title: 'Shopping-Website',
+      image: Thumbnail1,
+      link: 'https://github.com/Hadiyahh/Shopping-Website',
     },
     {
       title: 'Project 2',
       image: Thumbnail,
-      link: 'https://github.com/Hadiyahh/project2',
+      link: 'https://github.com/Hadiyahh',
+    },
+    {
+      title: 'Art Gallery',
+      image: Thumbnail2,
+      link: 'https://github.com/Hadiyahh/Art-Gallery',
+    },
+    {
+      title: 'Hospital Management systems',
+      image: hospital,
+      link: 'https://www.canva.com/design/DAGjCmUITMA/quZPshsPzRhmDX8a_TUUfg/edit?utm_content=DAGjCmUITMA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
     },
   ];
 
-  // Volunteer Image Slider
-  const scrollSlider = (direction) => {
-    const slider = document.getElementById('volunteerSlider');
-    const scrollAmount = 340;
-    if (slider) {
-      slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-    }
-  };
+
 
   // Image Modal
   const [modalImage, setModalImage] = useState(null);
@@ -69,8 +70,8 @@ function App() {
         </button>
 
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Hadiyah's website</p>
-
+        <p>Hadiyah Arif</p>
+        
         <div className="App-links">
           <a className="App-link" href="https://www.linkedin.com/in/hadiyaharif10" target="_blank" rel="noopener noreferrer">LinkedIn |</a>
           <a className="App-link" href="https://github.com/Hadiyahh" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -82,7 +83,7 @@ function App() {
         {/* About Me */}
         <section id="about" className="about-me fade-in">
           <h2>About Me</h2>
-          <p>Hello! I'm Hadiyah, a software developer with a passion for creating amazing web applications.</p>
+          <p>Hello! I'm Hadiyah, a software developer with a passion for learning things.</p>
         </section>
 
         {/* Skills */}
@@ -111,36 +112,103 @@ function App() {
         </section>
 
         {/* Hackathons */}
-        <section id="hackathons" className="hackathons-conferences fade-in">
-          <h2>Hackathons and Conferences</h2>
-          <div className="gallery">
-            <img src={conference1} alt="Conference participation" className="gallery-image" />
-          </div>
-        </section>
-
-        {/* Volunteer Experience */}
-        <section id="volunteer" className="volunteer-experiences fade-in">
-          <h2>Volunteer Experiences</h2>
-          <div className="slider-wrapper">
-            <button className="slider-button left" onClick={() => scrollSlider(-1)}>‹</button>
-            <div className="slider-frame">
-              <div className="slider-track" id="volunteerSlider">
-                {[volunteer1, volunteer2, volunteer3, volunteer1, volunteer2, volunteer3].map((img, i) => (
-                  <img
-                    key={i}
-                    src={img}
-                    alt={`Volunteer ${i + 1}`}
-                    className="slider-image"
-                    onClick={() => handleImageClick(img)}
-                  />
-                ))}
-              </div>
+          <section id="hackathons" className="hackathons-conferences fade-in">
+            <h2>Hackathons and Conferences</h2>
+            <div className="gallery">
+              <a href="https://www.uwindsor.ca/dailynews/2024-12-19/celebration-women-computing" target="_blank" rel="noopener noreferrer">
+                <img src={conference1} alt="Conference participation" className="gallery-image" />
+              </a>
             </div>
-            <button className="slider-button right" onClick={() => scrollSlider(1)}>›</button>
+          </section>
+
+          <section className="timeline-section journey-section fade-in">
+          <h2>My Journey Through Computer Science</h2>
+          <div className="timeline">
+            {[
+              {
+                year: 'Winter 2024',
+                title: 'COMP‑1000: Key Concepts in Computer Science (83%)',
+                description: 'Introduction to the basics of computing and problem-solving.'
+              },
+              {
+                year: 'Winter 2024',
+                title: 'COMP‑1400: Introduction to Algorithms and Programming I (86%)',
+                description: 'Learned foundational programming in C.'
+              },
+              {
+                year: 'Intersession 2024',
+                title: 'COMP‑1410: Introduction to Algorithms and Programming II (50%, later retaken at 90%)',
+                description: 'Introduced recursion, pointers, files, and dynamic memory in C.'
+              },
+              {
+                year: 'Intersession 2024',
+                title: 'COMP‑2067: Programming for Beginners (93%)',
+                description: 'Built basic programming skills — primarily for early-stage or non-majors.'
+              },
+              {
+                year: 'Intersession 2024',
+                title: 'COMP‑2650: Computer Architecture I (58%)',
+                description: 'Focused on digital logic, CPU basics, and low-level computer structure.'
+              },
+              {
+                year: 'Fall 2024',
+                title: 'COMP‑2120: Object-Oriented Programming (Java) (78%)',
+                description: 'Explored OOP concepts using Java, including classes, inheritance, and polymorphism.'
+              },
+              {
+                year: 'Fall 2024',
+                title: 'COMP‑2540: Data Structures and Algorithms (77%)',
+                description: 'Covered trees, hash tables, sorting, and greedy algorithms.'
+              },
+              {
+                year: 'Fall 2024',
+                title: 'COMP‑2560: Systems Programming (100%)',
+                description: 'Worked with Unix systems, the shell, memory management, processes, and networking.'
+              },
+              {
+                year: 'Fall 2024',
+                title: 'COMP‑2660: Computer Architecture II (68%)',
+                description: 'Examined x86 assembly, memory mapping, and program tracing.'
+              },
+              {
+                year: 'Winter 2025',
+                title: 'COMP‑3150: Database Management Systems',
+                description: 'In progress — exploring SQL, relational schema, and DB design.'
+              },
+              {
+                year: 'Winter 2025',
+                title: 'COMP‑3220: Object-Oriented Software Analysis & Design',
+                description: 'In progress — focusing on UML, software development lifecycles, and design patterns.'
+              },
+              {
+                year: 'Winter 2025',
+                title: 'COMP‑3300: Operating Systems Fundamentals',
+                description: 'In progress — covering processes, concurrency, memory, scheduling, and file systems.'
+              },
+              {
+                year: 'Winter 2025',
+                title: 'COMP‑3340: World Wide Web Information System Development',
+                description: 'In progress — learning about modern web tech, server/client architecture, and frameworks.'
+              },
+              {
+                year: 'Winter 2025',
+                title: 'COMP‑3400: Advanced Object‑Oriented System Design Using C++',
+                description: 'In progress — advanced OOP, design patterns, templates, and large-scale software structure.'
+              }
+            ].map((event, i) => (
+              <div className="timeline-item" key={i}>
+                <div className="timeline-marker"></div>
+                <div className="timeline-content">
+                  <h3>{event.year}</h3>
+                  <h4>{event.title}</h4>
+                  <p>{event.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* Modal */}
+          {/* Modal */}
         {modalImage && (
           <div className="image-modal" onClick={closeModal}>
             <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
@@ -149,6 +217,8 @@ function App() {
             </div>
           </div>
         )}
+        <p>Designed & built by Hadiyah © {new Date().getFullYear()}</p>
+
       </main>
     </div>
   );

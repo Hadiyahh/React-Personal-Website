@@ -1,0 +1,27 @@
+import volunteer1 from './images/coming-soon.jpg';
+import volunteer2 from './images/coming-soon.jpg';
+import volunteer3 from './images/coming-soon.jpg';
+import volunteer4 from './images/coming-soon.jpg';        
+        
+        {/* Volunteer Experience */}
+        <section id="volunteer" className="volunteer-experiences fade-in">
+          <h2>Volunteer Experiences</h2>
+          <div className="slider-wrapper">
+            <button className="slider-button left" onClick={() => scrollSlider(-1)}>‹</button>
+            <div className="slider-frame">
+              <div className="slider-track" id="volunteerSlider">
+                {[volunteer1, volunteer2, volunteer3, volunteer1, volunteer2, volunteer3].map((img, i) => (
+                  <img
+                    key={i}
+                    src={img}
+                    alt={`Volunteer ${i + 1}`}
+                    className="slider-image"
+                    onClick={() => handleImageClick(img)}
+                  />
+                ))}
+              </div>
+            </div>
+            <button className="slider-button right" onClick={() => scrollSlider(1)}>›</button>
+          </div>
+        </section>
+

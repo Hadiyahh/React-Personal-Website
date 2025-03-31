@@ -175,7 +175,7 @@ img {
 }
 
 .projects {
-  background-color: #7a3f48;
+  background-color: #ecdad2;
   color: white;
 }
 
@@ -183,14 +183,6 @@ img {
   background-color: #f9f5e9;
 }
 
-.volunteer-experiences {
-  background-color: #f5f5f5;
-  padding: 60px 20px;
-}
-
-.App.dark .volunteer-experiences {
-  background-color: #2b2b2b;
-}
 
 /* Dark Mode Styles */
 .App.dark {
@@ -341,4 +333,80 @@ img {
   padding: 0 10px;
   cursor: pointer;
   user-select: none;
+}
+
+
+/* Timeline Section */
+.timeline-section {
+  padding: 50px 20px;
+  background-color: #efe1bd;
+}
+
+.App.dark .timeline-section {
+  background-color: #2e2e2e;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 30px;
+  border-left: 3px solid #61dafb;
+  max-width: 600px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  background: #61dafb;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+/* Timeline Text Styling */
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.timeline-content h4 {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #3a3535;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #585656;
+  font-style: italic;
+}
+
+/* Dark Mode Overrides */
+.App.dark .timeline {
+  border-left-color: #a87373;
+}
+
+.App.dark .timeline-marker {
+  background: #9b2a2a;
+}
+
+.App.dark .timeline-content h3 {
+  color: #f0f0f0;
+}
+
+.App.dark .timeline-content h4 {
+  color: #d0d0d0;
+}
+
+.App.dark .timeline-content p {
+  color: #ccc;
+  font-style: italic;
 }
