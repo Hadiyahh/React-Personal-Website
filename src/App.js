@@ -11,7 +11,6 @@ import javaLogo from './logos/java.png';
 import bashLogo from './logos/bash.png';
 
 // Images
-import Thumbnail from './images/coming-soon.jpg';
 import Thumbnail1 from './images/shop.png';
 import Thumbnail2 from './images/art.png';
 import conference1 from './images/conference_pic.png';
