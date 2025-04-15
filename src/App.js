@@ -11,10 +11,13 @@ import javaLogo from './logos/java.png';
 import bashLogo from './logos/bash.png';
 
 // Images
+import Thumbnail from './images/coming-soon.jpg';
 import Thumbnail1 from './images/shop.png';
 import Thumbnail2 from './images/art.png';
 import conference1 from './images/conference_pic.png';
+import robotics from './images/robotics.png';
 import hospital from './images/hospital.png';
+import certificate1 from './images/certificate1.png';
 
 function App() {
   // Dark Mode Toggle
@@ -120,93 +123,115 @@ function App() {
               </a>
             </div>
           </section>
+          
+          {/* Volunteer */}
+          <section id="volunteer" className="volunteer fade-in">
+            <h2>Volunteer</h2>
+            <div className="gallery">
+              <a href="https://www.linkedin.com/posts/activity-7317713648615845888-72ol?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB_ewVgB2Zmq3iPSuoKBN5HTuj5_iiJRXvU " target="_blank" rel="noopener noreferrer">
+                <img src={robotics} alt="First Robotics Canada" className="gallery-image" />
+                <p className="image-caption"> Safety Attendant at First Robotics Canada</p>
+              </a>
+            </div>
+          </section>
+
+          {/* Certificates */}
+          <section id="certificates" className="certificates fade-in">
+            <h2>Certificates</h2>
+            <div className="gallery">
+              <a href="./images/certificate.pdf" download="certificate.pdf" target="_blank" rel="noopener noreferrer">
+                <img src={certificate1} alt="C++ certificate" className="gallery-image" />
+                <p className="image-caption"> OOP in C++ Programming Certificate</p>
+              </a>
+            </div>
+          </section>
 
           <section className="timeline-section journey-section fade-in">
-          <h2>My Journey Through Computer Science</h2>
-          <div className="timeline">
-            {[
-              {
-                year: 'Winter 2024',
-                title: 'COMP‑1000: Key Concepts in Computer Science (83%)',
-                description: 'Introduction to the basics of computing and problem-solving.'
-              },
-              {
-                year: 'Winter 2024',
-                title: 'COMP‑1400: Introduction to Algorithms and Programming I (86%)',
-                description: 'Learned foundational programming in C.'
-              },
-              {
-                year: 'Intersession 2024',
-                title: 'COMP‑1410: Introduction to Algorithms and Programming II (50%, later retaken at 90%)',
-                description: 'Introduced recursion, pointers, files, and dynamic memory in C.'
-              },
-              {
-                year: 'Intersession 2024',
-                title: 'COMP‑2067: Programming for Beginners (93%)',
-                description: 'Built basic programming skills — primarily for early-stage or non-majors.'
-              },
-              {
-                year: 'Intersession 2024',
-                title: 'COMP‑2650: Computer Architecture I (58%)',
-                description: 'Focused on digital logic, CPU basics, and low-level computer structure.'
-              },
-              {
-                year: 'Fall 2024',
-                title: 'COMP‑2120: Object-Oriented Programming (Java) (78%)',
-                description: 'Explored OOP concepts using Java, including classes, inheritance, and polymorphism.'
-              },
-              {
-                year: 'Fall 2024',
-                title: 'COMP‑2540: Data Structures and Algorithms (77%)',
-                description: 'Covered trees, hash tables, sorting, and greedy algorithms.'
-              },
-              {
-                year: 'Fall 2024',
-                title: 'COMP‑2560: Systems Programming (100%)',
-                description: 'Worked with Unix systems, the shell, memory management, processes, and networking.'
-              },
-              {
-                year: 'Fall 2024',
-                title: 'COMP‑2660: Computer Architecture II (68%)',
-                description: 'Examined x86 assembly, memory mapping, and program tracing.'
-              },
-              {
-                year: 'Winter 2025',
-                title: 'COMP‑3150: Database Management Systems',
-                description: 'In progress — exploring SQL, relational schema, and DB design.'
-              },
-              {
-                year: 'Winter 2025',
-                title: 'COMP‑3220: Object-Oriented Software Analysis & Design',
-                description: 'In progress — focusing on UML, software development lifecycles, and design patterns.'
-              },
-              {
-                year: 'Winter 2025',
-                title: 'COMP‑3300: Operating Systems Fundamentals',
-                description: 'In progress — covering processes, concurrency, memory, scheduling, and file systems.'
-              },
-              {
-                year: 'Winter 2025',
-                title: 'COMP‑3340: World Wide Web Information System Development',
-                description: 'In progress — learning about modern web tech, server/client architecture, and frameworks.'
-              },
-              {
-                year: 'Winter 2025',
-                title: 'COMP‑3400: Advanced Object‑Oriented System Design Using C++',
-                description: 'In progress — advanced OOP, design patterns, templates, and large-scale software structure.'
-              }
-            ].map((event, i) => (
-              <div className="timeline-item" key={i}>
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <h3>{event.year}</h3>
-                  <h4>{event.title}</h4>
-                  <p>{event.description}</p>
+            <h2>My Journey Through Computer Science: mgpa: 80% </h2>
+            <div className="timeline">
+              {[
+                {
+                  year: 'Winter 2024',
+                  title: 'COMP‑1000: Key Concepts in Computer Science',
+                  description: 'Introduction to the basics of computing and problem-solving.'
+                },
+                {
+                  year: 'Winter 2024',
+                  title: 'COMP‑1400: Introduction to Algorithms and Programming I',
+                  description: 'Learned foundational programming in C.'
+                },
+                {
+                  year: 'Intersession 2024',
+                  title: 'COMP‑1410: Introduction to Algorithms and Programming II',
+                  description: 'Introduced recursion, pointers, files, and dynamic memory in C.'
+                },
+                {
+                  year: 'Intersession 2024',
+                  title: 'COMP‑2067: Programming for Beginners',
+                  description: 'Built basic programming skills — primarily for early-stage or non-majors.'
+                },
+                {
+                  year: 'Intersession 2024',
+                  title: 'COMP‑2650: Computer Architecture I',
+                  description: 'Focused on digital logic, CPU basics, and low-level computer structure.'
+                },
+                {
+                  year: 'Fall 2024',
+                  title: 'COMP‑2120: Object-Oriented Programming (Java)',
+                  description: 'Explored OOP concepts using Java, including classes, inheritance, and polymorphism.'
+                },
+                {
+                  year: 'Fall 2024',
+                  title: 'COMP‑2540: Data Structures and Algorithms',
+                  description: 'Covered trees, hash tables, sorting, and greedy algorithms.'
+                },
+                {
+                  year: 'Fall 2024',
+                  title: 'COMP‑2560: Systems Programming',
+                  description: 'Worked with Unix systems, the shell, memory management, processes, and networking.'
+                },
+                {
+                  year: 'Fall 2024',
+                  title: 'COMP‑2660: Computer Architecture II',
+                  description: 'Examined x86 assembly, memory mapping, and program tracing.'
+                },
+                {
+                  year: 'Winter 2025',
+                  title: 'COMP‑3150: Database Management Systems',
+                  description: 'Explored SQL, relational schema, and DB design.'
+                },
+                {
+                  year: 'Winter 2025',
+                  title: 'COMP‑3220: Object-Oriented Software Analysis & Design',
+                  description: 'Focused on UML, software development lifecycles, and design patterns.'
+                },
+                {
+                  year: 'Winter 2025',
+                  title: 'COMP‑3300: Operating Systems Fundamentals',
+                  description: 'Covered processes, concurrency, memory, scheduling, and file systems.'
+                },
+                {
+                  year: 'Winter 2025',
+                  title: 'COMP‑3340: World Wide Web Information System Development',
+                  description: 'Learned about modern web tech, server/client architecture, and frameworks.'
+                },
+                {
+                  year: 'Winter 2025',
+                  title: 'COMP‑3400: Advanced Object‑Oriented System Design Using C++',
+                  description: 'Advanced OOP, design patterns, templates, and large-scale software structure.'
+                }
+              ].map((event, i) => (
+                <div className="timeline-item" key={i}>
+                  <div className="timeline-marker"></div>
+                  <div className="timeline-content">
+                    <h3>{event.year}</h3>
+                    <h4>{event.title}</h4>
+                    <p>{event.description}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </section>
+              ))}
+            </div>
+          </section>
 
           {/* Modal */}
         {modalImage && (

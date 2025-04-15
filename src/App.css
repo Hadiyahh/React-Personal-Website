@@ -182,8 +182,12 @@ img {
 .hackathons-conferences {
   background-color: #f9f5e9;
 }
-
-
+.volunteer {
+  background-color: #ece6d4;
+}
+.certificates {
+  background-color: #d5ebd7;
+}
 /* Dark Mode Styles */
 .App.dark {
   color: #f0f0f0;
@@ -215,7 +219,12 @@ img {
 .App.dark .hackathons-conferences {
   background-color: #3c3c3c;
 }
-
+.App.dark .volunteer {
+  background-color: #5e5844;
+}
+.App.dark .certificates {
+  background-color: #445a45;
+}
 /* Responsive Tweaks */
 @media (max-width: 768px) {
   .App-main li {
