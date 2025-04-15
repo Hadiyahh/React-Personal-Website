@@ -139,7 +139,7 @@ function App() {
           <section id="certificates" className="certificates fade-in">
             <h2>Certificates</h2>
             <div className="gallery">
-              <a href="./images/certificate.pdf" download="certificate.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="certificate.pdf" download="certificate.pdf" target="_blank" rel="noopener noreferrer">
                 <img src={certificate1} alt="C++ certificate" className="gallery-image" />
                 <p className="image-caption"> OOP in C++ Programming Certificate</p>
               </a>
