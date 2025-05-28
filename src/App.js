@@ -18,6 +18,7 @@ import conference1 from './images/conference_pic.png';
 import robotics from './images/robotics.png';
 import hospital from './images/hospital.png';
 import certificate1 from './images/certificate1.png';
+import counter from './images/counter.png';
 
 function App() {
   // Dark Mode Toggle
@@ -39,7 +40,7 @@ function App() {
     {
       title: 'Shopping-Website',
       image: Thumbnail1,
-      link: 'https://github.com/Hadiyahh/Shopping-Website',
+      link: 'https://shoppinggwebsite.netlify.app/',
     },
     {
       title: 'Project 2',
@@ -49,12 +50,17 @@ function App() {
     {
       title: 'Art Gallery',
       image: Thumbnail2,
-      link: 'https://github.com/Hadiyahh/Art-Gallery',
+      link: 'https://artgalleryyy.netlify.app/',
     },
     {
-      title: 'Hospital Management systems',
+      title: 'Hospital Management Systems',
       image: hospital,
       link: 'https://www.canva.com/design/DAGjCmUITMA/quZPshsPzRhmDX8a_TUUfg/edit?utm_content=DAGjCmUITMA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
+    },
+    {
+      title: 'Train station counter app',
+      image: counter,
+      link: 'https://123-counter-app-123.netlify.app/',
     },
   ];
 
@@ -219,6 +225,11 @@ function App() {
                   year: 'Winter 2025',
                   title: 'COMP‑3400: Advanced Object‑Oriented System Design Using C++',
                   description: 'Advanced OOP, design patterns, templates, and large-scale software structure.'
+                },
+                {
+                  year: 'Summer 2025 - In progress',
+                  title: 'COMP-3670: Computer Networks',
+                  description: 'Exploring Internet architecture, protocols, performance, and security in modern computer networks.'
                 }
               ].map((event, i) => (
                 <div className="timeline-item" key={i}>
