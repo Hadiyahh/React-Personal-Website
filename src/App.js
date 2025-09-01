@@ -166,6 +166,7 @@ function App() {
           </section>
 
           <section className="timeline-section journey-section fade-in">
+<<<<<<< HEAD
             <h2>My Journey Through Computer Science </h2>
             <div className="timeline">
               {[
@@ -252,6 +253,88 @@ function App() {
                     <h4>{event.title}</h4>
                     <p>{event.description}</p>
                   </div>
+=======
+          <h2>My Journey Through Computer Science</h2>
+          <div className="timeline">
+            {[
+              {
+                year: 'Winter 2024',
+                title: 'COMP‑1000: Key Concepts in Computer Science ',
+                description: 'Introduction to the basics of computing and problem-solving.'
+              },
+              {
+                year: 'Winter 2024',
+                title: 'COMP‑1400: Introduction to Algorithms and Programming I ',
+                description: 'Learned foundational programming in C.'
+              },
+              {
+                year: 'Intersession 2024',
+                title: 'COMP‑1410: Introduction to Algorithms and Programming II',
+                description: 'Introduced recursion, pointers, files, and dynamic memory in C.'
+              },
+              {
+                year: 'Intersession 2024',
+                title: 'COMP‑2067: Programming for Beginners',
+                description: 'Built basic programming skills — primarily for early-stage or non-majors.'
+              },
+              {
+                year: 'Intersession 2024',
+                title: 'COMP‑2650: Computer Architecture I',
+                description: 'Focused on digital logic, CPU basics, and low-level computer structure.'
+              },
+              {
+                year: 'Fall 2024',
+                title: 'COMP‑2120: Object-Oriented Programming (Java)',
+                description: 'Explored OOP concepts using Java, including classes, inheritance, and polymorphism.'
+              },
+              {
+                year: 'Fall 2024',
+                title: 'COMP‑2540: Data Structures and Algorithms',
+                description: 'Covered trees, hash tables, sorting, and greedy algorithms.'
+              },
+              {
+                year: 'Fall 2024',
+                title: 'COMP‑2560: Systems Programming ',
+                description: 'Worked with Unix systems, the shell, memory management, processes, and networking.'
+              },
+              {
+                year: 'Fall 2024',
+                title: 'COMP‑2660: Computer Architecture II',
+                description: 'Examined x86 assembly, memory mapping, and program tracing.'
+              },
+              {
+                year: 'Winter 2025',
+                title: 'COMP‑3150: Database Management Systems',
+                description: 'In progress — exploring SQL, relational schema, and DB design.'
+              },
+              {
+                year: 'Winter 2025',
+                title: 'COMP‑3220: Object-Oriented Software Analysis & Design',
+                description: 'Focused on UML, software development lifecycles, and design patterns.'
+              },
+              {
+                year: 'Winter 2025',
+                title: 'COMP‑3300: Operating Systems Fundamentals',
+                description: 'Covered processes, concurrency, memory, scheduling, and file systems.'
+              },
+              {
+                year: 'Winter 2025',
+                title: 'COMP‑3340: World Wide Web Information System Development',
+                description: 'Learned about modern web tech, server/client architecture, and frameworks.'
+              },
+              {
+                year: 'Winter 2025',
+                title: 'COMP‑3400: Advanced Object‑Oriented System Design Using C++',
+                description: 'Advanced OOP, design patterns, templates, and large-scale software structure.'
+              }
+            ].map((event, i) => (
+              <div className="timeline-item" key={i}>
+                <div className="timeline-marker"></div>
+                <div className="timeline-content">
+                  <h3>{event.year}</h3>
+                  <h4>{event.title}</h4>
+                  <p>{event.description}</p>
+>>>>>>> c7c3ea55c2cda9fad4f1bd96aae02770b5d9b0c0
                 </div>
               ))}
             </div>
