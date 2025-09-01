@@ -11,14 +11,16 @@ import javaLogo from './logos/java.png';
 import bashLogo from './logos/bash.png';
 
 // Images
-import Thumbnail from './images/coming-soon.jpg';
+import Thumbnail from './images/MERN.png';
 import Thumbnail1 from './images/shop.png';
 import Thumbnail2 from './images/art.png';
 import conference1 from './images/conference_pic.png';
 import robotics from './images/robotics.png';
 import hospital from './images/hospital.png';
 import certificate1 from './images/certificate1.png';
+import certificate2 from './images/sql.png';
 import counter from './images/counter.png';
+import bank from './images/bank.jpeg';
 
 function App() {
   // Dark Mode Toggle
@@ -43,9 +45,9 @@ function App() {
       link: 'https://shoppinggwebsite.netlify.app/',
     },
     {
-      title: 'Project 2',
+      title: 'MERN Stack Application',
       image: Thumbnail,
-      link: 'https://github.com/Hadiyahh',
+      link: 'https://github.com/Hadiyahh/MERN-Stack-Store',
     },
     {
       title: 'Art Gallery',
@@ -61,6 +63,11 @@ function App() {
       title: 'Train station counter app',
       image: counter,
       link: 'https://123-counter-app-123.netlify.app/',
+    },
+    {
+      title: 'C Bank System',
+      image: bank,
+      link: 'https://github.com/Hadiyahh/c-bank-system',
     },
   ];
 
@@ -150,10 +157,16 @@ function App() {
                 <p className="image-caption"> OOP in C++ Programming Certificate</p>
               </a>
             </div>
+            <div>
+              <a href="sql.pdf" download="SQL.pdf" target="_blank" rel="noopener noreferrer">
+              <img src={certificate2} alt="Intro to SQL certificate" className="gallery-image" />
+              <p className="image-caption"> Introduction to SQL Certificate</p>
+              </a>
+            </div>
           </section>
 
           <section className="timeline-section journey-section fade-in">
-            <h2>My Journey Through Computer Science: mgpa: 80% </h2>
+            <h2>My Journey Through Computer Science </h2>
             <div className="timeline">
               {[
                 {
@@ -227,9 +240,9 @@ function App() {
                   description: 'Advanced OOP, design patterns, templates, and large-scale software structure.'
                 },
                 {
-                  year: 'Summer 2025 - In progress',
+                  year: 'Summer 2025',
                   title: 'COMP-3670: Computer Networks',
-                  description: 'Exploring Internet architecture, protocols, performance, and security in modern computer networks.'
+                  description: 'Explored Internet architecture, protocols, performance, and security in modern computer networks.'
                 }
               ].map((event, i) => (
                 <div className="timeline-item" key={i}>
