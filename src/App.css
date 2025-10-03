@@ -173,6 +173,32 @@ img {
 .skills {
   background-color: #f4e4d3;
 }
+/* === Skills: make items side-by-side in a responsive grid === */
+.skills ul {
+  /* turn the list into a grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+
+  /* center the grid and limit width */
+  max-width: 1000px;
+  margin: 24px auto 0;
+}
+
+/* override the generic .App-main li rules just for Skills */
+.skills li {
+  width: auto;          /* stop forcing 240px */
+  margin: 0;            /* remove the auto-centering margin */
+  justify-content: flex-start;   /* icon + text align nicely */
+  padding: 12px 16px;   /* a bit wider looks better in rows */
+}
+
+/* smaller phones: tighter columns */
+@media (max-width: 480px) {
+  .skills ul {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
 
 .projects {
   background-color: #ecdad2;

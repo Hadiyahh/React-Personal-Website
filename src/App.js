@@ -9,6 +9,13 @@ import nodeLogo from './logos/node.png';
 import htmlCssjsLogo from './logos/html-js-css.png';
 import javaLogo from './logos/java.png';
 import bashLogo from './logos/bash.png';
+// import sqlLogo from './logos/sql.png';
+// import kaliLogo from './logos/kali.png';
+// import windowsLogo from './logos/windows.jpg';
+// import scikitLogo from './logos/scikit.png';
+// import csharpLogo from './logos/c#.jpg';
+// import linuxLogo from './logos/linux.webp';
+import pythonLogo from './logos/python.png';
 
 // Images
 import Thumbnail from './images/MERN.png';
@@ -21,6 +28,7 @@ import certificate1 from './images/certificate1.png';
 import certificate2 from './images/sql.png';
 import counter from './images/counter.png';
 import bank from './images/bank.jpeg';
+
 
 function App() {
   // Dark Mode Toggle
@@ -112,6 +120,12 @@ function App() {
             <li><img src={htmlCssjsLogo} alt="HTML, CSS, JavaScript Logo" className="skill-logo" />HTML, CSS & JavaScript</li>
             <li><img src={javaLogo} alt="Java Logo" className="skill-logo" />Java</li>
             <li><img src={bashLogo} alt="Bash Logo" className="skill-logo" />Bash</li>
+            <li><img src={pythonLogo} alt="Python Logo" className="skill-logo" />Python</li>
+            <li className="skill-tag">C#</li>
+            <li className="skill-tag">Assembly (x86)</li>
+            <li className="skill-tag">SQL</li>
+            <li className="skill-tag">MongoDB</li>
+
           </ul>
         </section>
 
@@ -165,7 +179,7 @@ function App() {
             </div>
           </section>
 
-          <section className="timeline-section journey-section fade-in">
+          {/* <section className="timeline-section journey-section fade-in">
             <h2>My Journey Through Computer Science </h2>
             <div className="timeline">
               {[
@@ -243,7 +257,7 @@ function App() {
                   year: 'Summer 2025',
                   title: 'COMP-3670: Computer Networks',
                   description: 'Explored Internet architecture, protocols, performance, and security in modern computer networks.'
-                }
+                } }
               ].map((event, i) => (
                 <div className="timeline-item" key={i}>
                   <div className="timeline-marker"></div>
@@ -255,7 +269,7 @@ function App() {
                 </div>
               ))}
             </div>
-          </section>
+          </section>*/}
 
           {/* Modal */}
         {modalImage && (
