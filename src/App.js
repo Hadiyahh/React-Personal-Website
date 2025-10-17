@@ -28,6 +28,8 @@ import certificate1 from './images/certificate1.png';
 import certificate2 from './images/sql.png';
 import counter from './images/counter.png';
 import bank from './images/bank.jpeg';
+import exoplanets from './images/exoplanets.png';
+import nasahacks from './images/nasahacks.png'
 
 
 function App() {
@@ -76,6 +78,11 @@ function App() {
       title: 'C Bank System',
       image: bank,
       link: 'https://github.com/Hadiyahh/c-bank-system',
+    },
+    {
+      title: 'A world Away',
+      image: exoplanets,
+      link: 'https://nasa-exo-planets.vercel.app/',
     },
   ];
 
@@ -147,6 +154,15 @@ function App() {
             <div className="gallery">
               <a href="https://www.uwindsor.ca/dailynews/2024-12-19/celebration-women-computing" target="_blank" rel="noopener noreferrer">
                 <img src={conference1} alt="Conference participation" className="gallery-image" />
+                <p className="image-caption"> Women Only Computer Science Conference</p>
+
+              </a>
+            </div>
+            <div className="gallery">
+              <a href="https://www.linkedin.com/posts/hadiyaharif10_machinelearning-astronomy-kepler-activity-7380756351292989440-lq85?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB_ewVgB2Zmq3iPSuoKBN5HTuj5_iiJRXvU" target="_blank" rel="noopener noreferrer">
+                <img src={nasahacks} alt="NasaHacks Third Place" className="gallery-image" />
+                <p className="image-caption"> Third place NasaHacks Winner</p>
+
               </a>
             </div>
           </section>
@@ -163,7 +179,7 @@ function App() {
           </section>
 
           {/* Certificates */}
-          <section id="certificates" className="certificates fade-in">
+          <section id="certificates" className="certifica</a>tes fade-in">
             <h2>Certificates</h2>
             <div className="gallery">
               <a href="certificate.pdf" download="certificate.pdf" target="_blank" rel="noopener noreferrer">
